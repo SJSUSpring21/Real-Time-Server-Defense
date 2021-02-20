@@ -21,6 +21,7 @@ Abstract:
 Using a dataset of logs, we can create a model that predicts when a real server attack is happening. We can identify what factors are involved in suspicious sessions in a server log and building a classification model to predict an attack during a session.
 
 Approach:
+Using the columns like time and duration, source/destination IP address, network protocol, and packets used, we can build a classification model that will identify suspicious network usage and will be able to predict server anomalies.  
 
 Persona:
 Enterprise companies that value their software and want to protect it in real-time.
