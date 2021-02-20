@@ -14,4 +14,17 @@ A large amount of data that is generated today is unstructured, which requires p
  
 ### 3) Real Time server attack detection.
 	
-Identify what factors are involved in suspicious sessions in a server log and building a classification model to predict an attack during a session.
+Intro:
+In today's world of software engineering, server logs are very helpful in viewing previous connections to servers.  However, with machine learning, these server logs can now be used to predict real-time server attacks. No longer do companies find out about an attack before it's too late.
+
+Abstract:
+Using a dataset of logs, we can create a model that predicts when a real server attack is happening. We can identify what factors are involved in suspicious sessions in a server log and building a classification model to predict an attack during a session.
+
+Approach:
+
+Persona:
+Enterprise companies that value their software and want to protect it in real-time.
+
+Dataset:
+https://www.kaggle.com/kartikjaspal/server-logs-suspicious
+
