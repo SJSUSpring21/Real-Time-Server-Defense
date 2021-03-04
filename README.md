@@ -1,16 +1,16 @@
 # Project Ideas		
 
-## 1) HR Analytics: Finding Quality Candidates 
+## 1) HR Analytics: Employee Attrition
 
-**Problem Statement**: Find quality job candidates who are likely to stay long-term after hiring.    
+**Problem Statement**: Determine the likelihood of employees leaving to find a new job or staying long term.   
 
-**Abstract**: Hiring quality candidates isn't always easy.  An increasing trend in today's generation is to accept a job offer only to leave after a year or less.  Companies are then forced to find new candidates to hire and train, which could be expensive and time consuming.  We believe that machine learning can help companies find quality candidates who will stay long term.  Machine learning in the HR field is still very new and most companies still use teams of employees to make hiring decision.  However, these teams will be able to make improved decisions when paired with our software.        
+**Abstract**: Employee retention is a hot topic in the current software world.  An increasing trend in today's generation is to accept a job offer only to leave after a year or less.  Companies are then forced to find new candidates to hire and train, which could be expensive and time consuming. There are many factors that can lead an employee to leaving such as travel distance, age, company culture, job title, etc.  Using this information, we believe that machine learning can help companies determine if their employees are likely to stay long term.  From there, companies can try and make improvements to entice their employees to stay.  Machine learning in the HR field is still very new and most companies still use teams of employees to run their HR department.  However, these teams will be able to make improved decisions when paired with our software.        
 
-**Approach**: To use a machine learning model to find quality long-term hires.  We will use factors like education level, major, experience, and previous company size to distinguish candidates from each other.   
+**Approach**: To use a machine learning model to find an employees likelihood of leaving.  We will use factors like travel distance, age, education, employee count, etc. to distinguish candidates from each other.   
 
-**Persona**: Companies that struggle with retaining employees and want to improve their hiring system.  
+**Persona**: Companies that struggle with retaining employees.  
 
-**Dataset**: https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists
+**Dataset**: https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
 ## 2) Real Time server attack detection.
 	
