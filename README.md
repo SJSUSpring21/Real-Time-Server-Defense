@@ -1,4 +1,4 @@
-## 2) Real Time server attack detection.
+Real Time server attack detection.
 	
 **Problem Statement**: Identify what factors are involved in suspicious sessions in a server and also build a classification model to predict an attack during a session.
 
