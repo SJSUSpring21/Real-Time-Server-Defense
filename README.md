@@ -10,3 +10,5 @@
 
 **Dataset**: http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
 
+**High Level Architecture**:
+[ArchitectureDiagram (1).pdf](https://github.com/SJSUSpring21/Real-Time-Server-Defense/files/6118925/ArchitectureDiagram.1.pdf)
