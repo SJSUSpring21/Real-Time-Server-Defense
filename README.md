@@ -12,3 +12,5 @@
 
 **High Level Architecture**:
 [ArchitectureDiagram (1).pdf](https://github.com/SJSUSpring21/Real-Time-Server-Defense/files/6118925/ArchitectureDiagram.1.pdf)
+
+![image](https://user-images.githubusercontent.com/34078992/110699495-c504a380-81a3-11eb-91c2-e557405eac81.png)
