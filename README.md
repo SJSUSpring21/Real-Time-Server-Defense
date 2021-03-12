@@ -12,5 +12,5 @@
 
 **High Level Architecture**:
 
-![image](https://user-images.githubusercontent.com/34078992/110699629-eb2a4380-81a3-11eb-804a-8d8fae8fbfe0.png)
-
+![image](https://user-images.githubusercontent.com/34078992/110900220-47ca5300-82b7-11eb-89c5-7ac932ea9213.png)
+![image](https://user-images.githubusercontent.com/34078992/110900239-4e58ca80-82b7-11eb-9d57-9f5415f4bac6.png)
