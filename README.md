@@ -6,7 +6,7 @@
 
 **Approach**: To use a machine learning model to detect an ongoing attack by using factors like size of the data transferred in single connection, number of wrong fragments in the connection, number of failed logins and different time related traffic features. 
 
-**Persona**: Enterprise companies that value their software and want to protect it in real-time.
+**Persona**: Enterprise companies that value their software and want to protect it in real-time..
 
 **Dataset**: http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html
 
