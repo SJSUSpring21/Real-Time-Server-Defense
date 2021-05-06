@@ -21,7 +21,7 @@ filedata = fileobj['Body'].read()
 # file data will be a binary stream.  We have to decode it 
 contents = filedata.decode('utf-8') 
 
-result = predictResult(contents)
+result = predict.predictResult(contents)
 result_file = open("result.txt", "w")
 result_file.write(result)
 
