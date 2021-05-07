@@ -1,0 +1,8 @@
+// Build Docker from container/ 
+docker build -t project272 .
+
+// Run Docker
+docker run -it project272 main.py
+
+// bash into running docker container
+docker exec -it <Container ID> /bin/bash
