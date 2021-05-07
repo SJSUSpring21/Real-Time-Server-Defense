@@ -14,6 +14,7 @@ from tensorflow.keras.utils import to_categorical
 
 from io import StringIO  
 
+'''
 s3client = boto3.client(
     's3',
     region_name='us-east-1'
@@ -33,6 +34,7 @@ filedata = fileobj['Body'].read()
 
 # file data will be a binary stream.  We have to decode it 
 contents = filedata.decode('utf-8') 
+'''
 
 # NEED TO PASS 'line' TO MODEL
 cols="""duration,
@@ -113,8 +115,9 @@ attacks_types
 path = "corrected"
 df = pd.read_csv(path,names=columns)
 '''
-data = StringIO(contents)
-df = pd.read_csv(data, names=columns, sep=",")
+#data = StringIO(contents)
+path = "corrected"
+df = pd.read_csv(path, names=columns, sep=",")
 df.shape
 df = df[df.target.isin(list(attacks_types.keys()))]
 df['attack_type'] = df.target.apply(lambda r:attacks_types[r[:]])
