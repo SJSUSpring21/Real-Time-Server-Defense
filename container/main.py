@@ -2,6 +2,7 @@ import boto3
 from predict import *
 
 import os
+import json
 import pandas as pd
 import numpy as np
 #import matplotlib.pyplot as plt
@@ -169,7 +170,7 @@ sc = MinMaxScaler()
 
 x_test = sc.fit_transform(df)
 
-result_file = open("result.txt", "w")
+result_file = open("result.json", "w")
 for i in range(x_test.shape[0]):
     result = predictResult(x_test[i])
 
@@ -177,5 +178,9 @@ for i in range(x_test.shape[0]):
     results = pd.DataFrame(result)
     results = results[0].map(reverse_attackmap)
 
-    # need to send this to frontend in this for loop
-    result_file.write(results[0])
+    # writes result to json
+    dictionary = {
+        "attack_type": results[0]
+    }
+    json_object = json.dumps(dictionary, indent = 4)
+    result_file.write(json_object)
