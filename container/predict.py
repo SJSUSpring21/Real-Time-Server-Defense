@@ -16,8 +16,11 @@ from io import StringIO
 #and keep it in a file 
 
 def predictResult(input):
+    sc = MinMaxScaler()
+    input = input.to_numpy()
+    input = sc.fit_transform(input.reshape(1,-1))
     model = load_model('ann.h5')
-    y_pred = model.predict(input.reshape(1,-1))
+    y_pred = model.predict(input)
     y_res = y_pred.argmax(axis=1)
 
     return y_res

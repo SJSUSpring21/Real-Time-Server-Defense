@@ -166,21 +166,23 @@ df.drop('attack_type', axis = 1, inplace=True)
 
 df.dtypes
 
-sc = MinMaxScaler()
+#sc = MinMaxScaler()
 
-x_test = sc.fit_transform(df)
+#x_test = sc.fit_transform(df)
+x_test = df
 
 result_file = open("result.json", "w")
 for i in range(x_test.shape[0]):
-    result = predictResult(x_test[i])
+    result = predictResult(x_test.iloc[i,:])
 
     reverse_attackmap = {k:v for v,k in attackmap.items()}
     results = pd.DataFrame(result)
     results = results[0].map(reverse_attackmap)
 
+    result_dict = x_test.iloc[i,:].to_dict()
+    result_dict["attack_type"] = results[0]
+    
     # writes result to json
-    dictionary = {
-        "attack_type": results[0]
-    }
-    json_object = json.dumps(dictionary, indent = 4)
+    # {"duration":0, attack}
+    json_object = json.dumps(result_dict)
     result_file.write(json_object)
