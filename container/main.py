@@ -171,7 +171,7 @@ df.dtypes
 #x_test = sc.fit_transform(df)
 x_test = df
 
-result_file = open("/etc/td-agent/result.json", "w")
+result_file = open("result.json", "w")
 for i in range(x_test.shape[0]):
     result = predictResult(x_test.iloc[i,:])
 

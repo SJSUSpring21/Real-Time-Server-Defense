@@ -1,8 +1,13 @@
-// Build Docker from container/ 
-docker build -t project272 .
+// stop elastic search
+sudo systemctl stop td-agent.service
 
-// Run Docker
-docker run -it project272 main.py
+// start elastic search
+sudo systemctl start td-agent.service
 
-// bash into running docker container
-docker exec -it <Container ID> /bin/bash
+// check if result.json (or other files) are being passed to elastic search
+cd /var/log/td-agent
+tail -100f td-agent.log
+
+// run model
+cd Real-Time-Server-Defense/container
+python3 main.py
