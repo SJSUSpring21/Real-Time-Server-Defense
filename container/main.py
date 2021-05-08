@@ -180,7 +180,12 @@ for i in range(x_test.shape[0]):
     results = results[0].map(reverse_attackmap)
 
     result_dict = x_test.iloc[i,:].to_dict()
-    result_dict["attack_type"] = results[0]
+
+    if(result[0] == "normal") {
+        result_dict["attack_type"] = 0
+    } else {
+        result_dict["attack_type"] = 1
+    }
     
     # writes result to json
     # {"duration":0, attack}
