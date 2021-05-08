@@ -117,7 +117,7 @@ path = "corrected"
 df = pd.read_csv(path,names=columns)
 '''
 #data = StringIO(contents)
-path = "container/corrected"
+path = "corrected"
 df = pd.read_csv(path, names=columns, sep=",")
 df.shape
 df = df[df.target.isin(list(attacks_types.keys()))]
