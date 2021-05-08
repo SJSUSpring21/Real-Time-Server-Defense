@@ -19,7 +19,7 @@ def predictResult(input):
     sc = MinMaxScaler()
     input = input.to_numpy()
     input = sc.fit_transform(input.reshape(1,-1))
-    model = load_model('ann.h5')
+    model = load_model('container/ann.h5')
     y_pred = model.predict(input)
     y_res = y_pred.argmax(axis=1)
 

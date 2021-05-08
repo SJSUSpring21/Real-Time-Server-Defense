@@ -117,7 +117,7 @@ path = "corrected"
 df = pd.read_csv(path,names=columns)
 '''
 #data = StringIO(contents)
-path = "corrected"
+path = "container/corrected"
 df = pd.read_csv(path, names=columns, sep=",")
 df.shape
 df = df[df.target.isin(list(attacks_types.keys()))]
@@ -181,13 +181,13 @@ for i in range(x_test.shape[0]):
 
     result_dict = x_test.iloc[i,:].to_dict()
 
-    if(result[0] == "normal") {
+    if(result[0] == "normal"):
         result_dict["attack_type"] = 0
-    } else {
+    else:
         result_dict["attack_type"] = 1
-    }
     
     # writes result to json
     # {"duration":0, attack}
     json_object = json.dumps(result_dict)
     result_file.write(json_object)
+    result_file.write('\n')
