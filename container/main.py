@@ -2,6 +2,7 @@ import boto3
 from predict import *
 
 import datetime
+import time
 import os
 import json
 import pandas as pd
@@ -201,3 +202,4 @@ for i in range(x_test.shape[0]):
     if count >= 200:
         break
 
+    time.sleep(1)
