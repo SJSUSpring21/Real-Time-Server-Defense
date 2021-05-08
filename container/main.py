@@ -1,6 +1,7 @@
 import boto3
 from predict import *
 
+import datetime
 import os
 import json
 import pandas as pd
@@ -171,6 +172,7 @@ df.dtypes
 #x_test = sc.fit_transform(df)
 x_test = df
 
+count = 0
 result_file = open("result.json", "w")
 for i in range(x_test.shape[0]):
     result = predictResult(x_test.iloc[i,:])
@@ -185,9 +187,17 @@ for i in range(x_test.shape[0]):
         result_dict["attack_type"] = 0
     else:
         result_dict["attack_type"] = 1
+
+    now = datetime.datetime.now()
+    result_dict["timestamp"] = now.strftime("%Y/%m/%d %H:%M:%S")
     
     # writes result to json
     # {"duration":0, attack}
     json_object = json.dumps(result_dict)
     result_file.write(json_object)
     result_file.write('\n')
+
+    count+=1
+    if count >= 200:
+        break
+
